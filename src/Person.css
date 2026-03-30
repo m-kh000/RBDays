@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+.person-card{
+    @apply flex-col place-items-center p-5 hover:scale-107;
+    transition: ease-out 300ms;
+}
+.ppdiv{
+    @apply w-60 h-35 overflow-hidden m-0;
+}
+.person-bday{
+    @apply text-sm text-[#777];
+}
