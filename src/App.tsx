@@ -28,7 +28,7 @@ function App() {
     });
   
 
-  async function handleFetch(path: string) {
+  async function handleFetch(path: string) {{
         setState({ data: null, error: null, loading: true });
         try {
           const response = await fetch(url + path);
