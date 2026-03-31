@@ -4,11 +4,10 @@ import "./Person.css";
 type PersonProps = {
   name: string | null;
   bday: string | null;
-  pic: string | null;
   withbd?: boolean;
 };
 
-export default function Person({ name, bday, pic, withbd }: PersonProps) {
+export default function Person({ name, bday, withbd }: PersonProps) {
   return (
     <ConfettiButton
         options={{

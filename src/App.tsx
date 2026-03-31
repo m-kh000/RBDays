@@ -5,10 +5,9 @@ import { ThreeDot } from "react-loading-indicators";
 
 let url = "https://birthdays-api.onrender.com/";
 type Person = {
-  name: string | null;
-  bday: string | null;
-  pic: string | null;
-  withbd?: boolean;
+  Name: string | null;
+  birthday: string | null;
+  // withbd?: boolean;
 };
 
 function App() {
@@ -89,10 +88,9 @@ function App() {
             {people.map((person) => {
               return (
                 <Person
-                  name={person.name}
-                  bday={person.bday}
-                  pic={person.pic}
-                  withbd={person.withbd}
+                  name={person.Name}
+                  bday={person.birthday}
+                  withbd={true}
                 />
               );
             })}
