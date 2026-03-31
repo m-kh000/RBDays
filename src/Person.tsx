@@ -2,8 +2,8 @@ import { ConfettiButton } from "@/components/magicui/confetti";
 import "./Person.css";
 
 type PersonProps = {
-  name: string | null;
-  bday: string | null;
+  name: string ;
+  bday: string ;
   withbd?: boolean;
 };
 
@@ -22,10 +22,13 @@ export default function Person({ name, bday, withbd }: PersonProps) {
       className="person-card"
     >
       <div className="ppdiv">
-        <img src={"people/" + name?.toLowerCase() + ".png"} alt="profile picture" className="pp" />
+        <img src={"people/" + name?.toLowerCase() + ".png"} alt="profile picture" className="pp" 
+        onError={(e) => { e.currentTarget.src = 'people/pl.jpeg'; }}/>
       </div>
       <h2 className="person-name">{name}</h2>
-      {withbd && <p className="person-bday">{bday}</p>}
+      <p className="person-bday">
+      {withbd ? bday : "Wish Them a Happy Birthday Now!" }
+      </p>
     </ConfettiButton>
   );
 }

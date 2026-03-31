@@ -7,6 +7,9 @@
 .ppdiv{
     @apply w-60 h-35 overflow-hidden m-0;
 }
+.pp{
+    @apply h-full w-auto
+}
 .person-bday{
     @apply text-sm text-[#777];
 }
