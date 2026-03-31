@@ -29,14 +29,13 @@ function App() {
   
 
   async function handleFetch(path: string) {
-    { console.log("fetching data...") ;
         setState({ data: null, error: null, loading: true });
         try {
-          console.log("fetching from " + url + path);
           const response = await fetch(url + path);
           console.log(" response " + response);
           const data = await response.json();
           console.log(" data " + data);
+          console.log(JSON.stringify(data, null, 2));
           setState({ data, error: null, loading: false });
           setPeople(data);
         } catch (error) {
