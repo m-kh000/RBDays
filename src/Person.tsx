@@ -23,7 +23,7 @@ export default function Person({ name, bday, pic, withbd }: PersonProps) {
       className="person-card"
     >
       <div className="ppdiv">
-        <img src={pic ?? ''} alt="profile picture" className="pp" />
+        <img src={"people/" + name?.toLowerCase() + ".png"} alt="profile picture" className="pp" />
       </div>
       <h2 className="person-name">{name}</h2>
       {withbd && <p className="person-bday">{bday}</p>}

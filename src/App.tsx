@@ -3,7 +3,7 @@ import "./App.css";
 import Person from "./Person";
 import { ThreeDot } from "react-loading-indicators";
 
-let url = "http://birthdays-api.onrender.com/";
+let url = "https://birthdays-api.onrender.com/";
 type Person = {
   name: string | null;
   bday: string | null;
