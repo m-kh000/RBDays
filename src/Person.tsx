@@ -21,6 +21,7 @@ export default function Person({ name, bday, withbd }: PersonProps) {
       }}
       className="person-card"
     >
+
       <div className="ppdiv">
         <img src={"people/" + name?.toLowerCase() + ".png"} alt="profile picture" className="pp" 
         onError={(e) => { e.currentTarget.src = 'people/pl.jpeg'; }}/>
